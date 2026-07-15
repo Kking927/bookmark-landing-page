@@ -78,6 +78,7 @@
   --spacing-nav-socials-pad: clamp(1.5rem, 1.15rem + 1.5vw, 2.5rem);
 
   /* Hero */
+  --spacing-hero-section: clamp(3rem, 2.3rem + 3vw, 5rem);
   --spacing-hero-inline: clamp(1rem, 0.48rem + 2.2vw, 2.5rem);
   --spacing-hero-btns-margin-top: clamp(0.375rem, 0.24rem + 0.56vw, 0.75rem);
 
@@ -110,7 +111,7 @@
   --spacing-faq-desc-bottom: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
 
   /* CTA */
-  --spacing-cta-padding-block: clamp(2.5rem, 2rem + 1.67vw, 3.5rem);
+  --spacing-cta-padding-block: clamp(2.5rem, 2.12rem + 1.25vw, 3.25rem);
   --spacing-cta-container-gap: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
   --spacing-cta-content-gap: clamp(1rem, 0.81rem + 0.81vw, 1.875rem);
   --spacing-cta-form-gap: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
@@ -135,6 +136,8 @@
   --spacing-hero-gap: clamp(2rem, 1.48rem + 2.45vw, 4rem);
   --spacing-hero-padding-bottom: clamp(3.75rem, 2.65rem + 5.15vw, 8rem);
   --spacing-hero-content-gap: clamp(1.5rem, 1.37rem + 0.61vw, 2rem);
+  
+  /* Bookmark */
   --spacing-bookmark-padding-block: clamp(3.75rem, 3.16rem + 2.76vw, 6rem);
 
   /* Decorative Background Pill Radius (Hero / Bookmark) */
@@ -380,7 +383,7 @@ body,
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-block: var(--spacing-section);
+  padding-block: var(--spacing-hero-section);
   padding-inline: var(--spacing-hero-inline);
   gap: var(--spacing-hero-gap);
 }
