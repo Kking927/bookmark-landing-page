@@ -34,7 +34,7 @@
 
   /* Font Sizes */
   --fs-h1: clamp(2rem, 1.65rem + 1.49vw, 3rem);
-  --fs-h2: clamp(1.75rem, 1.57rem + 0.75vw, 2.25rem);
+  --fs-h2: clamp(1.75rem, 1.62rem + 0.42vw, 2rem);
   --fs-h3: clamp(1.25rem, 1.08rem + 0.75vw, 1.75rem);
   --fs-body: clamp(0.95rem, 0.89rem + 0.26vw, 1.125rem);
   --fs-nav-link: clamp(0.85rem, 1.39rem + -0.6vw, 1.25rem);
@@ -97,11 +97,19 @@
   --spacing-download-content-gap: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
   --spacing-download-cards-gap: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
   --spacing-download-card-padding-top: clamp(1.75rem, 1.49rem + 1.13vw, 2.5rem);
-  --spacing-download-card-padding-bottom: clamp(1.25rem, 1.16rem + 0.38vw, 1.5rem);
+  --spacing-download-card-padding-bottom: clamp(
+    1.25rem,
+    1.16rem + 0.38vw,
+    1.5rem
+  );
 
   --spacing-download-card-padding-inline: clamp(1rem, 0.82rem + 0.75vw, 1.5rem);
   --spacing-download-card-icon-margin: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
-  --spacing-download-card-subtitle-margin: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
+  --spacing-download-card-subtitle-margin: clamp(
+    1.5rem,
+    1.32rem + 0.75vw,
+    2rem
+  );
 
   --spacing-download-card-divider-margin: clamp(1rem, 0.82rem + 0.75vw, 1.5rem);
 
@@ -136,7 +144,7 @@
   --spacing-hero-gap: clamp(2rem, 1.48rem + 2.45vw, 4rem);
   --spacing-hero-padding-bottom: clamp(3.75rem, 2.65rem + 5.15vw, 8rem);
   --spacing-hero-content-gap: clamp(1.5rem, 1.37rem + 0.61vw, 2rem);
-  
+
   /* Bookmark */
   --spacing-bookmark-padding-block: clamp(3.75rem, 3.16rem + 2.76vw, 6rem);
 
@@ -149,13 +157,21 @@
   --spacing-features-content-margin-bottom: clamp(2rem, 1.48rem + 2.15vw, 4rem);
 
   /* Download */
-  --spacing-download-card-offset-firefox: clamp(0rem, -0.65rem + 3.03vw, 2.5rem);
+  --spacing-download-card-offset-firefox: clamp(
+    0rem,
+    -0.65rem + 3.03vw,
+    2.5rem
+  );
   --spacing-download-card-offset-opera: clamp(0rem, -1.3rem + 6.06vw, 5rem);
 
   /* Footer */
   --spacing-footer-nav-start: clamp(2rem, -0.28rem + 4.76vw, 4rem);
   --spacing-footer-desktop-menu-gap: clamp(1.5rem, 1.06rem + 1.84vw, 2.75rem);
-  --spacing-footer-padding-block-desktop: clamp(1rem, -0.42rem + 2.96vw, 1.875rem);
+  --spacing-footer-padding-block-desktop: clamp(
+    1rem,
+    -0.42rem + 2.96vw,
+    1.875rem
+  );
 }
 
 /* Resets */
@@ -1097,7 +1113,7 @@ body,
   }
 
   .header {
-    padding-inline: clamp(1.5rem, -1.75rem + 10.83vw, 8rem);
+    padding-inline: clamp(1.5rem, -1.88rem + 11.25vw, 8.25rem);
   }
 
   .header__nav {
@@ -1166,7 +1182,8 @@ body,
     flex-direction: row;
     text-align: left;
     justify-content: space-between;
-    padding-inline: clamp(1.5rem, -1.75rem + 10.83vw, 8rem); 0;
+    padding-inline-start: clamp(1.5rem, -1.88rem + 11.25vw, 8.25rem);
+    padding-inline-end: 0;
     gap: clamp(1.5rem, 0.65rem + 1.8vw, 2.5rem);
   }
 
@@ -1211,6 +1228,7 @@ body,
     border-block-end: 1px solid rgba(145, 148, 161, 0.25);
     padding: 0;
     list-style: none;
+    margin-block-end: clamp(2.5rem, 1.8rem + 3.5vw, 5rem);
   }
 
   .features__item {
