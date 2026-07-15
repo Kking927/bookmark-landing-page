@@ -40,6 +40,7 @@
   --fs-nav-link: clamp(0.85rem, 1.39rem + -0.6vw, 1.25rem);
   --fs-description: clamp(0.875rem, 0.85rem + 0.11vw, 0.95rem);
   --fs-sm: clamp(0.75rem, 0.72rem + 0.15vw, 0.85rem);
+  --fs-btn: var(--fs-sm);
 
   --fs-features-link: clamp(0.875rem, 0.83rem + 0.19vw, 1rem);
 
@@ -95,11 +96,19 @@
   --spacing-download-content-gap: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
   --spacing-download-cards-gap: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
   --spacing-download-card-padding-top: clamp(1.75rem, 1.49rem + 1.13vw, 2.5rem);
-  --spacing-download-card-padding-bottom: clamp(1.25rem, 1.16rem + 0.38vw, 1.5rem);
+  --spacing-download-card-padding-bottom: clamp(
+    1.25rem,
+    1.16rem + 0.38vw,
+    1.5rem
+  );
 
   --spacing-download-card-padding-inline: clamp(1rem, 0.82rem + 0.75vw, 1.5rem);
   --spacing-download-card-icon-margin: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
-  --spacing-download-card-subtitle-margin: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
+  --spacing-download-card-subtitle-margin: clamp(
+    1.5rem,
+    1.32rem + 0.75vw,
+    2rem
+  );
 
   --spacing-download-card-divider-margin: clamp(1rem, 0.82rem + 0.75vw, 1.5rem);
 
@@ -109,7 +118,7 @@
   --spacing-faq-desc-bottom: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
 
   /* CTA */
-  --spacing-cta-padding-block: clamp(3.5rem, 3.15rem + 1.5vw, 4.5rem);
+  --spacing-cta-padding-block: clamp(2.5rem, 2.2rem + 1vw, 3.25rem);
   --spacing-cta-container-gap: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
   --spacing-cta-content-gap: clamp(1rem, 0.81rem + 0.81vw, 1.875rem);
   --spacing-cta-form-gap: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
@@ -124,7 +133,7 @@
 
   /* Desktop Layout */
   /* Global Button Padding */
-  --spacing-btn-block: clamp(0.75rem, 0.69rem + 0.28vw, 1rem);
+  --spacing-btn-block: clamp(0.55rem, 0.5rem + 0.2vw, 0.75rem);
   --spacing-btn-inline: clamp(1.25rem, 1.13rem + 0.56vw, 1.75rem);
 
   /* Header */
@@ -145,13 +154,21 @@
   --spacing-features-content-margin-bottom: clamp(2rem, 1.48rem + 2.15vw, 4rem);
 
   /* Download */
-  --spacing-download-card-offset-firefox: clamp(0rem, -0.65rem + 3.03vw, 2.5rem);
+  --spacing-download-card-offset-firefox: clamp(
+    0rem,
+    -0.65rem + 3.03vw,
+    2.5rem
+  );
   --spacing-download-card-offset-opera: clamp(0rem, -1.3rem + 6.06vw, 5rem);
 
   /* Footer */
   --spacing-footer-nav-start: clamp(2rem, -0.28rem + 4.76vw, 4rem);
   --spacing-footer-desktop-menu-gap: clamp(1.5rem, 1.06rem + 1.84vw, 2.75rem);
-  --spacing-footer-padding-block-desktop: clamp(1rem, -0.42rem + 2.96vw, 1.875rem)
+  --spacing-footer-padding-block-desktop: clamp(
+    1rem,
+    -0.42rem + 2.96vw,
+    1.875rem
+  );
 }
 
 /* Resets */
@@ -1092,6 +1109,10 @@ body,
     display: none;
   }
 
+  .header {
+    padding-inline: clamp(1.5rem, -2.3rem + 7.9vw, 6rem);
+  }
+
   .header__nav {
     position: static;
     width: auto;
@@ -1158,7 +1179,8 @@ body,
     flex-direction: row;
     text-align: left;
     justify-content: space-between;
-    padding-inline: 0;
+    padding-inline: clamp(1.5rem, -2.3rem + 7.9vw, 6rem) 0;
+    gap: clamp(1.5rem, 0.65rem + 1.8vw, 2.5rem);
   }
 
   .hero__img-container {
@@ -1169,7 +1191,7 @@ body,
   .hero__content {
     order: 1;
     flex: 1;
-    max-width: 30rem;
+    max-width: 32rem;
   }
 
   .hero__img-container::after {
@@ -1222,13 +1244,14 @@ body,
   /* Bookmark */
   .bookmark {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     padding-inline: 0;
+    gap: clamp(2rem, -2.5rem + 9.3vw, 6.5rem);
   }
 
   .bookmark__img-container {
-    flex: 1;
-    max-width: 33.75rem;
+    flex: 0 1 33.75rem;
+    max-width: 30rem;
   }
 
   .bookmark__img-container::after {
@@ -1238,10 +1261,9 @@ body,
   }
 
   .bookmark__content {
-    flex: 1;
+    flex: 0 1 27.8125rem;
     align-items: flex-start;
     text-align: left;
-    max-width: 27.8125rem;
   }
 
   .bookmark__btn {
@@ -1308,7 +1330,7 @@ body,
   .footer {
     padding-block: var(--spacing-footer-padding-block-desktop);
   }
-  
+
   .footer__container {
     max-width: 69.375rem;
     width: 100%;
