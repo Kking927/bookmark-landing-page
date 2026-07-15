@@ -1195,6 +1195,7 @@ body,
   /* Features */
   .features {
     padding-inline: 0;
+    max-width: 100%;
   }
 
   .features__content {
@@ -1271,15 +1272,15 @@ body,
     margin-inline: auto;
     height: 27.5rem;
   }
-  
+
   .download__card-btn {
-  background-color: var(--blue-600);
-  color: var(--white);
-  white-space: nowrap;
-  width: 100%;
-  text-align: center;
-  padding-inline: 1rem;
-}
+    background-color: var(--blue-600);
+    color: var(--white);
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    padding-inline: 1rem;
+  }
 
   .download__card--firefox {
     margin-block-start: var(--spacing-download-card-offset-firefox);
