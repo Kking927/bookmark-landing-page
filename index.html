@@ -1,1 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Bookmark Manager</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <a href="#" class="header__logo-link">
+        <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/logo-bookmark.svg" alt="Bookmark Logo" class="header__logo">
+      </a>
+
+      <button id="menu-toggle" class="header__toggle" aria-label="Open Menu" aria-expanded="false">
+        <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/icon-hamburger.svg" alt="" class="header__toggle-icon">
+      </button>
+
+      <nav id="header-nav" class="header__nav">
+        <div class="header__nav-top">
+          <a href="#" class="header__logo-link">
+            <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/b8307b5ef7c49c657726af41ecca067cd4e82430/images/logo-bookmark-mobile.svg" alt="Bookmark Logo" class="header__nav-logo">
+          </a>
+          <button id="menu-close" class="header__close" aria-label="Close navigation menu">
+            <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/icon-close.svg" alt="" class="header__close-icon">
+          </button>
+        </div>
+
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#features" class="header__link">Features</a>
+          </li>
+          <li class="header__item">
+            <a href="#pricing" class="header__link">Pricing</a>
+          </li>
+          <li class="header__item">
+            <a href="#contact" class="header__link">Contact</a>
+          </li>
+          <li class="header__item">
+            <a href="#login" class="header__link header__link--cta">Login</a>
+          </li>
+        </ul>
+
+        <div class="header__socials">
+          <a href="#" class="header__social-link" aria-label="Facebook">
+            <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/icon-facebook.svg" alt="">
+          </a>
+          <a href="#" class="header__social-link" aria-label="Twitter">
+            <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/icon-twitter.svg" alt="">
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero__img-container">
+        <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/illustration-hero.svg" alt="Vector illustration of a modern web browser mockup showing a dashboard interface with colorful graphs and bars, overlaid on top of a soft blue abstract shape" class="hero__img">
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">A Simple Bookmark Manager</h1>
+        <p class="hero__description">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+
+        <div class="hero__btns">
+          <a href="#chrome" class="hero__btn hero__btn--chrome">Get it on Chrome</a>
+          <a href="#firefox" class="hero__btn hero__btn--firefox">Get it on Firefox</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="features__content">
+        <h2 class="features__title">Features</h2>
+        <p class="features__description">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+      </div>
+
+      <ul class="features__list" role="tablist" aria-label="Feature tabs selection menu">
+        <li class="features__item" role="presentation">
+          <a href="#panel-1" id="tab-1" class="features__link features__link--active" role="tab" aria-selected="true" aria-controls="panel-1" tabindex="0">Simple Bookmarking</a>
+        </li>
+        <li class="features__item" role="presentation">
+          <a href="#panel-2" id="tab-2" class="features__link" role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1">Speedy Searching</a>
+        </li>
+        <li class="features__item" role="presentation">
+          <a href="#panel-3" id="tab-3" class="features__link" role="tab" aria-selected="false" aria-controls="panel-3" tabindex="-1">Easy Sharing</a>
+        </li>
+      </ul>
+
+      <div class="features__panels-container">
+
+        <div class="features__panel features__panel--active" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+          <div class="bookmark">
+            <div class="bookmark__img-container">
+              <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/illustration-features-tab-1.svg" alt="A web browser mockup showing a dashboard interface with colorful circular icons and text placeholder lines." class="bookmark__img">
+            </div>
+            <div class="bookmark__content">
+              <h3 class="bookmark__title">Bookmark in one click</h3>
+              <p class="bookmark__description">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+              <a href="#more-info" class="bookmark__btn">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="features__panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+          <div class="bookmark">
+            <div class="bookmark__img-container">
+              <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/b8307b5ef7c49c657726af41ecca067cd4e82430/images/illustration-features-tab-2.svg" class="bookmark__img">
+            </div>
+            <div class="bookmark__content">
+              <h3 class="bookmark__title">Intelligent search</h3>
+              <p class="bookmark__description">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+              <a href="#more-info" class="bookmark__btn">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="features__panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+          <div class="bookmark">
+            <div class="bookmark__img-container">
+              <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/b8307b5ef7c49c657726af41ecca067cd4e82430/images/illustration-features-tab-3.svg" class="bookmark__img">
+            </div>
+            <div class="bookmark__content">
+              <h3 class="bookmark__title">Share your bookmarks</h3>
+              <p class="bookmark__description">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+              <a href="#more-info" class="bookmark__btn">More Info</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="download" id="pricing">
+      <div class="download__content">
+        <h2 class="download__title">Download the extension</h2>
+        <p class="download__description">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+      </div>
+
+      <div class="download__cards">
+        <div class="download__card download__card--chrome">
+          <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/logo-chrome.svg" alt="Chrome Logo" class="download__card-icon">
+          <h3 class="download__card-title">Add to Chrome</h3>
+          <p class="download__card-subtitle">Minimum version 62</p>
+          <div class="download__card-divider"></div>
+          <a href="#install" class="download__card-btn">Add & Install Extension</a>
+        </div>
+
+        <div class="download__card download__card--firefox">
+          <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/logo-firefox.svg" alt="Firefox Logo" class="download__card-icon">
+          <h3 class="download__card-title">Add to Firefox</h3>
+          <p class="download__card-subtitle">Minimum version 55</p>
+          <div class="download__card-divider"></div>
+          <a href="#install" class="download__card-btn">Add & Install Extension</a>
+        </div>
+
+        <div class="download__card download__card--opera">
+          <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/logo-opera.svg" alt="Opera Logo" class="download__card-icon">
+          <h3 class="download__card-title">Add to Opera</h3>
+          <p class="download__card-subtitle">Minimum version 46</p>
+          <div class="download__card-divider"></div>
+          <a href="#install" class="download__card-btn">Add & Install Extension</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faqs">
+      <div class="faqs__content">
+        <h2 class="faqs__title">Frequently Asked Questions</h2>
+        <p class="faqs__description">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+      </div>
+
+      <div class="faqs__accordion">
+        <details class="faqs__accordion-item">
+          <summary class="faqs__accordion-title">What is Bookmark?</summary>
+          <div class="faqs__accordion-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+          </div>
+        </details>
+
+        <details class="faqs__accordion-item">
+          <summary class="faqs__accordion-title">How can I request a new browser?</summary>
+          <div class="faqs__accordion-description">
+            <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+          </div>
+        </details>
+
+        <details class="faqs__accordion-item">
+          <summary class="faqs__accordion-title">Is there a mobile app?</summary>
+          <div class="faqs__accordion-description">
+            <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</p>
+          </div>
+        </details>
+
+        <details class="faqs__accordion-item">
+          <summary class="faqs__accordion-title">What about other Chromium browsers?</summary>
+          <div class="faqs__accordion-description">
+            <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
+          </div>
+        </details>
+      </div>
+      <a href="#info">More Info</a>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="cta__container">
+        <div class="cta__content">
+          <span class="cta__span">35,000+ already joined</span>
+          <h2 class="cta__title">Stay up-to-date with what we’re doing</h2>
+        </div>
+
+        <form class="cta__form" novalidate>
+          <div class="cta__input-wrapper">
+            <div class="cta__field-group">
+              <input type="email" class="cta__input" placeholder="Enter your email address" aria-label="Email address" required>
+              <span class="cta__error-message" aria-live="polite"></span>
+            </div>
+          </div>
+          <button type="submit" class="cta__btn">Contact Us</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="#" class="footer__logo-link" aria-label="Bookmark Home">
+          <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/b27f451d97a2ff867b8a3e0c8d11cde5d2c5c46b/images/logo-bookmark-footer.svg" alt="" class="footer__logo">
+        </a>
+
+        <nav class="footer__nav" aria-label="Footer Navigation">
+          <ul class="footer__menu">
+            <li class="footer__menu-item"><a href="#features" class="footer__link">Features</a></li>
+            <li class="footer__menu-item"><a href="#pricing" class="footer__link">Pricing</a></li>
+            <li class="footer__menu-item"><a href="#contact" class="footer__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__socials">
+          <a href="https://facebook.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+            <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/icon-facebook.svg" alt="">
+          </a>
+          <a href="https://twitter.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter profile">
+            <img src="https://raw.githubusercontent.com/Kking927/bookmark-landing-page/acdb347909aaa61c70f83293ab2a4aad0590953f/images/icon-twitter.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
