@@ -88,7 +88,7 @@
 
   /* Bookmark */
   --spacing-bookmark-inline: clamp(1.5rem, 1.21rem + 1.22vw, 2.5rem);
-  --spacing-bookmark-gap: clamp(3.5rem, 2.37rem + 4.8vw, 7.5rem);
+  --spacing-bookmark-gap: clamp(2rem, 0.59rem + 4.69vw, 4.8125rem);
   --spacing-bookmark-content-gap: clamp(0.875rem, 0.74rem + 0.56vw, 1.25rem);
 
   /* Download */
@@ -96,19 +96,11 @@
   --spacing-download-content-gap: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
   --spacing-download-cards-gap: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
   --spacing-download-card-padding-top: clamp(1.75rem, 1.49rem + 1.13vw, 2.5rem);
-  --spacing-download-card-padding-bottom: clamp(
-    1.25rem,
-    1.16rem + 0.38vw,
-    1.5rem
-  );
+  --spacing-download-card-padding-bottom: clamp(1.25rem, 1.16rem + 0.38vw, 1.5rem);
 
   --spacing-download-card-padding-inline: clamp(1rem, 0.82rem + 0.75vw, 1.5rem);
   --spacing-download-card-icon-margin: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
-  --spacing-download-card-subtitle-margin: clamp(
-    1.5rem,
-    1.32rem + 0.75vw,
-    2rem
-  );
+  --spacing-download-card-subtitle-margin: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
 
   --spacing-download-card-divider-margin: clamp(1rem, 0.82rem + 0.75vw, 1.5rem);
 
@@ -154,21 +146,13 @@
   --spacing-features-content-margin-bottom: clamp(2rem, 1.48rem + 2.15vw, 4rem);
 
   /* Download */
-  --spacing-download-card-offset-firefox: clamp(
-    0rem,
-    -0.65rem + 3.03vw,
-    2.5rem
-  );
+  --spacing-download-card-offset-firefox: clamp(0rem, -0.65rem + 3.03vw, 2.5rem);
   --spacing-download-card-offset-opera: clamp(0rem, -1.3rem + 6.06vw, 5rem);
 
   /* Footer */
   --spacing-footer-nav-start: clamp(2rem, -0.28rem + 4.76vw, 4rem);
   --spacing-footer-desktop-menu-gap: clamp(1.5rem, 1.06rem + 1.84vw, 2.75rem);
-  --spacing-footer-padding-block-desktop: clamp(
-    1rem,
-    -0.42rem + 2.96vw,
-    1.875rem
-  );
+  --spacing-footer-padding-block-desktop: clamp(1rem, -0.42rem + 2.96vw, 1.875rem);
 }
 
 /* Resets */
@@ -1246,7 +1230,6 @@ body,
     flex-direction: row;
     justify-content: center;
     padding-inline: 0;
-    gap: clamp(2rem, -2.5rem + 9.3vw, 6.5rem);
   }
 
   .bookmark__img-container {
