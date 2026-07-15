@@ -110,7 +110,7 @@
   --spacing-faq-desc-bottom: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
 
   /* CTA */
-  --spacing-cta-padding-block: clamp(2.5rem, 2.2rem + 1vw, 3.25rem);
+  --spacing-cta-padding-block: clamp(2.5rem, 2rem + 1.67vw, 3.5rem);
   --spacing-cta-container-gap: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
   --spacing-cta-content-gap: clamp(1rem, 0.81rem + 0.81vw, 1.875rem);
   --spacing-cta-form-gap: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
@@ -380,7 +380,7 @@ body,
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-block: 0 var(--spacing-section);
+  padding-block: var(--spacing-section);
   padding-inline: var(--spacing-hero-inline);
   gap: var(--spacing-hero-gap);
 }
@@ -1094,7 +1094,7 @@ body,
   }
 
   .header {
-    padding-inline: clamp(1.5rem, -2.3rem + 7.9vw, 6rem);
+    padding-inline: clamp(1.5rem, -1.75rem + 10.83vw, 8rem);
   }
 
   .header__nav {
@@ -1163,7 +1163,7 @@ body,
     flex-direction: row;
     text-align: left;
     justify-content: space-between;
-    padding-inline: clamp(1.5rem, -2.3rem + 7.9vw, 6rem) 0;
+    padding-inline: clamp(1.5rem, -1.75rem + 10.83vw, 8rem); 0;
     gap: clamp(1.5rem, 0.65rem + 1.8vw, 2.5rem);
   }
 
