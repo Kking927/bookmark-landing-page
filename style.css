@@ -73,14 +73,13 @@
   --header-icon-padding: clamp(0.375rem, 0.33rem + 0.19vw, 0.5rem);
   --spacing-nav-link-block: clamp(0.875rem, 0.74rem + 0.56vw, 1.25rem);
   --spacing-nav-cta-margin: clamp(1rem, 0.82rem + 0.75vw, 1.5rem);
-  --spacing-nav-cta-padding-block: clamp(0.625rem, 0.54rem + 0.38vw, 0.875rem);
   --spacing-nav-socials-gap: clamp(1.75rem, 1.49rem + 1.13vw, 2.5rem);
   --spacing-nav-socials-pad: clamp(1.5rem, 1.15rem + 1.5vw, 2.5rem);
 
   /* Hero */
-  --spacing-hero-section: clamp(3rem, 2.3rem + 3vw, 5rem);
+  --spacing-hero-section: clamp(3rem, 2.5rem + 1.67vw, 4rem);
   --spacing-hero-inline: clamp(1rem, 0.48rem + 2.2vw, 2.5rem);
-  --spacing-hero-btns-margin-top: clamp(0.375rem, 0.24rem + 0.56vw, 0.75rem);
+  --spacing-hero-btns-margin-block-start: clamp(0.375rem, 0.24rem + 0.56vw, 0.75rem);
 
   /* Features */
   --spacing-features-top: clamp(2rem, 1.43rem + 2.44vw, 4rem);
@@ -95,6 +94,7 @@
   /* Download */
   --spacing-download-content-margin-bottom: clamp(2rem, 1.65rem + 1.5vw, 3rem);
   --spacing-download-content-gap: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
+  --spacing-download-card-title-margin: clamp(0.5rem, 0.4rem + 0.2vw, 0.75rem);
   --spacing-download-cards-gap: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
   --spacing-download-card-padding-top: clamp(1.75rem, 1.49rem + 1.13vw, 2.5rem);
   --spacing-download-card-padding-bottom: clamp(
@@ -133,30 +133,30 @@
   --spacing-footer-socials-gap: clamp(2rem, 1.82rem + 0.75vw, 2.5rem);
 
   /* Desktop Layout */
-  /* Global Button Padding */
+  /* Global Button Padding Desktop */
   --spacing-btn-block: clamp(0.55rem, 0.5rem + 0.2vw, 0.75rem);
   --spacing-btn-inline: clamp(1.25rem, 1.13rem + 0.56vw, 1.75rem);
 
-  /* Header */
+  /* Header Desktop */
   --spacing-header-nav-gap: clamp(1.5rem, 1.15rem + 1.5vw, 2.5rem);
 
-  /* Hero & Bookmark Section Gaps */
+  /* Hero Desktop */
   --spacing-hero-gap: clamp(2rem, 1.48rem + 2.45vw, 4rem);
   --spacing-hero-padding-bottom: clamp(3.75rem, 2.65rem + 5.15vw, 8rem);
   --spacing-hero-content-gap: clamp(1.5rem, 1.37rem + 0.61vw, 2rem);
 
-  /* Bookmark */
+  /* Bookmark Desktop */
   --spacing-bookmark-padding-block: clamp(3.75rem, 3.16rem + 2.76vw, 6rem);
 
-  /* Decorative Background Pill Radius (Hero / Bookmark) */
+  /* Decorative Background Pill Radius (Hero / Bookmark) Desktop */
   --radius-pill-accent: clamp(6.25rem, 5.44rem + 3.76vw, 9.375rem);
 
-  /* Features */
+  /* Features Desktop */
   --spacing-features-link-pad-inline: clamp(1rem, 0.61rem + 1.83vw, 2.5rem);
   --fs-features-link-desktop: clamp(0.875rem, 0.83rem + 0.21vw, 1.05rem);
   --spacing-features-content-margin-bottom: clamp(2rem, 1.48rem + 2.15vw, 4rem);
 
-  /* Download */
+  /* Download Desktop */
   --spacing-download-card-offset-firefox: clamp(
     0rem,
     -0.65rem + 3.03vw,
@@ -164,7 +164,7 @@
   );
   --spacing-download-card-offset-opera: clamp(0rem, -1.3rem + 6.06vw, 5rem);
 
-  /* Footer */
+  /* Footer Desktop */
   --spacing-footer-nav-start: clamp(2rem, -0.28rem + 4.76vw, 4rem);
   --spacing-footer-desktop-menu-gap: clamp(1.5rem, 1.06rem + 1.84vw, 2.75rem);
   --spacing-footer-padding-block-desktop: clamp(
@@ -227,7 +227,7 @@ body {
   font-weight: var(--fw-regular);
   font-size: var(--fs-body);
   color: var(--blue-950);
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 .container {
@@ -247,6 +247,7 @@ body,
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
   padding-block: var(--spacing-header-vertical);
 }
 
@@ -276,7 +277,6 @@ body,
 }
 
 .header__nav {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -355,7 +355,8 @@ body,
   border: 2px solid #ffffff;
   border-radius: 5px;
   font-weight: var(--fw-semi-bold);
-  padding-block: var(--spacing-nav-cta-padding-block);
+  padding-block: var(--spacing-btn-block);
+  padding-inline: var(--spacing-btn-inline);
   transition: transform 0.15s ease, box-shadow 0.15s ease,
     background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
@@ -453,7 +454,7 @@ body,
   display: flex;
   justify-content: center;
   gap: var(--spacing-gap-small);
-  margin-block-start: var(--spacing-hero-btns-margin-top);
+  margin-block-start: var(--spacing-hero-btns-margin-block-start);
 }
 
 .hero__btn,
@@ -672,19 +673,6 @@ body,
   height: auto;
 }
 
-.bookmark__img-container::after {
-  content: "";
-  position: absolute;
-  top: 20%;
-  bottom: -15px;
-  right: 20%;
-  width: 1000px;
-  background-color: var(--blue-600);
-  border-bottom-right-radius: 100px;
-  z-index: 1;
-  pointer-events: none;
-}
-
 .bookmark__content {
   display: flex;
   flex-direction: column;
@@ -706,6 +694,19 @@ body,
 
 .bookmark__btn {
   display: none;
+}
+
+.bookmark__img-container::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  bottom: -15px;
+  right: 20%;
+  width: 62.5rem;
+  background-color: var(--blue-600);
+  border-bottom-right-radius: 100px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Download */
@@ -872,7 +873,7 @@ body,
     brightness(98%) contrast(105%);
 }
 
-.faqs__accordion-item[open] .faqs__accordion-title::after {
+[open] > .faqs__accordion-title::after {
   transform: rotate(180deg);
   filter: invert(41%) sepia(87%) saturate(4646%) hue-rotate(341deg)
     brightness(98%) contrast(105%);
@@ -892,7 +893,6 @@ body,
   padding-block: var(--spacing-cta-padding-block);
   margin-inline: calc(var(--container-gutter) * -1);
   padding-inline: var(--container-gutter);
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -952,7 +952,7 @@ body,
 
 .cta__input {
   width: 100%;
-  padding-block: 1rem;
+  padding-block: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
   padding-inline: var(--spacing-cta-field-padding-inline);
   border-radius: 5px;
   border: 2px solid transparent;
@@ -1074,7 +1074,7 @@ body,
   text-decoration: none;
   text-transform: uppercase;
   font-size: var(--fs-footer-link);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semi-bold);
   letter-spacing: 0.125em;
   transition: color 0.2s ease;
 }
@@ -1113,6 +1113,7 @@ body,
   }
 
   .header {
+    position: static;
     padding-inline: clamp(1.5rem, -1.88rem + 11.25vw, 8.25rem);
   }
 
