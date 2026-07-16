@@ -96,7 +96,7 @@
   --spacing-bookmark-content-gap: clamp(0.875rem, 0.74rem + 0.56vw, 1.25rem);
 
   /* Download */
-  --spacing-download-content-margin-bottom: clamp(2rem, 1.65rem + 1.5vw, 3rem);
+  --spacing-download-content-margin-block-end: clamp(2rem, 1.65rem + 1.5vw, 3rem);
   --spacing-download-content-gap: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
   --spacing-download-card-title-margin: clamp(0.5rem, 0.4rem + 0.2vw, 0.75rem);
   --spacing-download-cards-gap: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
@@ -227,7 +227,7 @@ body {
   font-weight: var(--fw-regular);
   font-size: var(--fs-body);
   color: var(--blue-950);
-  background-color: ;
+  background-color: var(--white);
 }
 
 .container {
@@ -715,7 +715,7 @@ body,
 .download__content {
   max-width: 33.75rem;
   margin-inline: auto;
-  margin-block-end: var(--spacing-download-content-margin-bottom);
+  margin-block-end: var(--spacing-download-content-margin-block-end);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-download-content-gap);
@@ -1406,7 +1406,8 @@ body,
   .faqs__accordion-title::after {
     transition: none;
   }
-  .faqs__accordion-item[open] .faqs__accordion-title::after {
+  
+  .faqs__accordion-title[open]::after {
     transform: none;
   }
 
