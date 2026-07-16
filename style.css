@@ -227,7 +227,7 @@ body {
   font-weight: var(--fw-regular);
   font-size: var(--fs-body);
   color: var(--blue-950);
-  background-color: var(--white);
+  background-color: ;
 }
 
 .container {
@@ -408,7 +408,6 @@ body,
 .hero__img-container {
   position: relative;
   width: 100%;
-  max-width: 30rem;
 }
 
 .hero__img {
@@ -662,7 +661,6 @@ body,
 .bookmark__img-container {
   position: relative;
   width: 100%;
-  max-width: 30rem;
 }
 
 .bookmark__img {
