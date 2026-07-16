@@ -56,7 +56,7 @@
   --fw-semi-bold: 500;
 
   /* Spacing */
-  --spacing-section: clamp(3.75rem, 2.87rem + 3.76vw, 6.25rem);
+  --spacing-section: clamp(3.75rem, 2.76rem + 4.13vw, 6.5rem);
   --spacing-stack-large: clamp(2rem, 1.65rem + 1.5vw, 3rem);
   --spacing-gap-small: clamp(0.75rem, 0.66rem + 0.38vw, 1rem);
 
@@ -92,7 +92,7 @@
 
   /* Bookmark */
   --spacing-bookmark-inline: clamp(1.5rem, 1.21rem + 1.22vw, 2.5rem);
-  --spacing-bookmark-gap: clamp(2rem, 0.59rem + 4.69vw, 4.8125rem);
+  --spacing-bookmark-gap: clamp(2rem, 0.45rem + 6.01vw, 6rem);
   --spacing-bookmark-content-gap: clamp(0.875rem, 0.74rem + 0.56vw, 1.25rem);
 
   /* Download */
@@ -1113,7 +1113,7 @@ body,
 
   .header {
     position: static;
-    padding-inline: clamp(1.5rem, -1.88rem + 11.25vw, 8.25rem);
+    padding-inline: clamp(1.5rem, -1.9rem + 11.33vw, 8.5rem);
   }
 
   .header__nav {
@@ -1182,7 +1182,7 @@ body,
     flex-direction: row;
     text-align: left;
     justify-content: space-between;
-    padding-inline-start: clamp(1.5rem, -1.88rem + 11.25vw, 8.25rem);
+    padding-inline: clamp(1.5rem, -1.9rem + 11.33vw, 8.5rem);
     padding-inline-end: 0;
     gap: clamp(1.5rem, 0.65rem + 1.8vw, 2.5rem);
   }
