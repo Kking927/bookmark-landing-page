@@ -75,6 +75,10 @@
   --spacing-nav-cta-margin: clamp(1rem, 0.82rem + 0.75vw, 1.5rem);
   --spacing-nav-socials-gap: clamp(1.75rem, 1.49rem + 1.13vw, 2.5rem);
   --spacing-nav-socials-pad: clamp(1.5rem, 1.15rem + 1.5vw, 2.5rem);
+  
+   /* Global Button Padding */
+  --spacing-btn-block: clamp(0.55rem, 0.5rem + 0.2vw, 0.75rem);
+  --spacing-btn-inline: clamp(1.25rem, 1.13rem + 0.56vw, 1.75rem);
 
   /* Hero */
   --spacing-hero-section: clamp(3rem, 2.5rem + 1.67vw, 4rem);
@@ -133,10 +137,6 @@
   --spacing-footer-socials-gap: clamp(2rem, 1.82rem + 0.75vw, 2.5rem);
 
   /* Desktop Layout */
-  /* Global Button Padding Desktop */
-  --spacing-btn-block: clamp(0.55rem, 0.5rem + 0.2vw, 0.75rem);
-  --spacing-btn-inline: clamp(1.25rem, 1.13rem + 0.56vw, 1.75rem);
-
   /* Header Desktop */
   --spacing-header-nav-gap: clamp(1.5rem, 1.15rem + 1.5vw, 2.5rem);
 
@@ -247,7 +247,6 @@ body,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
   padding-block: var(--spacing-header-vertical);
 }
 
@@ -277,6 +276,7 @@ body,
 }
 
 .header__nav {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -355,8 +355,6 @@ body,
   border: 2px solid #ffffff;
   border-radius: 5px;
   font-weight: var(--fw-semi-bold);
-  padding-block: var(--spacing-btn-block);
-  padding-inline: var(--spacing-btn-inline);
   transition: transform 0.15s ease, box-shadow 0.15s ease,
     background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
@@ -1157,8 +1155,8 @@ body,
     margin-block-start: 0;
     background-color: var(--red-400);
     border-color: var(--red-400);
-    color: #ffffff;
-    padding-block: var(--spacing-btn-block);
+    color: var(--white);
+    padding-block: clamp(0.35rem, 0.3rem + 0.2vw, 0.55rem);
     padding-inline: var(--spacing-btn-inline);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
