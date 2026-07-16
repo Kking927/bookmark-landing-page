@@ -780,7 +780,10 @@ body,
 
 .download__card-divider {
   width: calc(100% + 3rem);
-  border-block-start: 4px dotted rgba(145, 148, 161, 0.2);
+  height: 4px;
+  background-image: url("https://raw.githubusercontent.com/Kking927/bookmark-landing-page/6d56a1ce6e42b087d60a278656be8123630fa7e0/images/bg-dots.svg");
+  background-repeat: repeat-x;
+  background-position: center;
   margin-block-end: var(--spacing-download-card-divider-margin);
 }
 
